@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/users")
-@CrossOrigin(origins = "http://localhost:3002")
+@CrossOrigin(origins = "https://ecommerce-frontend-el32.vercel.app/")
 public class userController {
 
     @Autowired
