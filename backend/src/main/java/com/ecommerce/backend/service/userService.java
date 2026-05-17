@@ -20,4 +20,17 @@ public class userService {
         repo.save(user);
         return "SUCCESS";
     }
+
+    public  String loginUser(String email,String password){
+        Optional<userEntity> userOpt=repo.findByEmail(email);
+
+        if(userOpt.isEmpty()){
+            return "USER_NOT_FOUND";
+        }
+        userEntity user=userOpt.get();
+        if(!user.getPassword().equals(password)){
+            return "WRONG_PASSWORD";
+        }
+        return "SUCCESS";
+    }
 }
