@@ -11,7 +11,8 @@ import java.util.Map;
 
 @RestController
 @RequestMapping("/api/users")
-@CrossOrigin(origins = "https://ecommerce-frontend-el32.vercel.app/")
+
+@CrossOrigin(origins = "https://ecommerce-frontend-el32.vercel.app")
 public class userController {
 
     @Autowired
