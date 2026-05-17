@@ -23,7 +23,7 @@ public class userController {
         String result=service.addUser(user);
 
         return switch (result){
-            case "EMAIL_EXITS" ->ResponseEntity.status(409).body(
+            case "EMAIL_EXISTS" ->ResponseEntity.status(409).body(
                     "Email already registered,please login."
             );
             case "SUCCESS"->ResponseEntity.ok(
